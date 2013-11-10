@@ -70,8 +70,8 @@ public class ShowMap extends Thread
   public void run()
   {
     try
-    {
-    	Process process = Runtime.getRuntime().exec("cmd /c start http://maps.google.com/maps?q=" + this.threadToShow.myGEO_Latitude + "," + this.threadToShow.myGEO_Longitude);
+    { /* This command has been edited by AJ to work on Mac OSX. I added "open /Application/Google\ Chrome.app/ */
+    	Process process = Runtime.getRuntime().exec("open "/Applications/Google\ Chrome.app/" http://maps.google.com/maps?q=" + this.threadToShow.myGEO_Latitude + "," + this.threadToShow.myGEO_Longitude);
     }
     catch (Exception e)
     {
